@@ -10,50 +10,93 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nanum+Gothic+Coding:wght@400;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+        .black-han-sans-regular {
+            font-family: "Black Han Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        header {
+            margin: 30px auto 0px auto;
+            width: 80%;
+            height: 100px;
+            background-color: rgb(59, 59, 59);
+            display: flex;
+            flex-direction: row;
+        }
+
+        section {
+            width: 100%;
+            background-color: green;
+            height: auto;
+        }
+
+        .bar-logo>img {
+            height: 100px;
+            width: 150px;
+        }
+
+        .bar-menu {
+            height: 100px;
+            width: 200px;
+            background-color: rgb(59, 59, 59);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 42px;
+        }
+
+        .bar-menu .current {
+            color: rgb(255, 102, 0);
+        }
+
+        .bar-menu a {
+            text-decoration-line: none;
+        }
+
+        .bar-menu .other {
+            color: white;
+        }
 
         body {
             background-color: lightgray;
         }
-
 
         .team {
             height: 30vh;
             width: 40vw;
             margin: 20px auto 20px auto;
             color: white;
-
             display: flex;
-
             align-items: center;
             justify-content: center;
-
             flex-direction: column;
             background-position: center;
             background-size: cover;
-
         }
 
         .team::after {
             height: 30vh;
-            width: 40vw;
+            width: 38vw;
             content: "";
             background-image: url('file:///C:/Users/bjsmo/Desktop/98014735_l_normal_none.png');
             background-position: center;
             background-size: cover;
             position: absolute;
-            top: 20%;
-            left: 50%;
+            top: 33vh;
+            left: 50vw;
             transform: translate3d(-50%, -50%, 0);
             z-index: -1;
-            opacity: 0.55;
+            opacity: 0.65;
         }
 
-        .first {
+        .teamtext {
             font-family: "Nanum Gothic Coding", monospace;
             font-weight: 700;
             font-style: normal;
             font-size: 30px;
-
             text-align: center;
         }
 
@@ -61,12 +104,9 @@
             font-family: "Nanum Gothic Coding", monospace;
             font-weight: 600;
             font-style: normal;
-            font-size: 20px;
-
+            font-size: 22px;
             text-align: center;
         }
-
-
 
         .cards {
             padding: 20px;
@@ -106,13 +146,10 @@
             margin-top: 4vh;
             margin-right: 1vw;
             border: 0.35vw solid gray;
-
         }
-
 
         .card-back {
             margin-top: 4vh;
-
             width: 100%;
             height: 100%;
             border-radius: 10px;
@@ -125,14 +162,13 @@
             justify-content: center;
             align-items: center;
             color: white;
-            font-size: 19px;
+            font-size: 17px;
             background-color: #474747;
             border: 0.3vw solid gray;
             font-family: "Noto Sans KR", sans-serif;
             font-optical-sizing: auto;
             font-weight: 450;
             font-style: normal;
-
             text-align: center;
         }
 
@@ -156,6 +192,10 @@
             font-style: normal;
             text-align: center;
         }
+        
+        .footer{
+            height: 10vh;
+        }
 
         .card:hover .card-img {
             filter: brightness(0.3);
@@ -163,9 +203,8 @@
 
         .card:hover .card-text {
             opacity: 1;
-
-
         }
+
     </style>
 
     <script>
@@ -187,8 +226,31 @@
 
 <body>
 
+    <header>
+        <div class="bar-logo">
+            <img src="img/3J2B_logo.png" alt="">
+        </div>
+        <div class="bar-menu black-han-sans-regular">
+            <a href="main.html">
+                <span class="other">MAIN</span>
+            </a>
+        </div>
+
+        <div class="bar-menu black-han-sans-regular">
+            <a href="blog.html">
+                <span class="other">BLOG</span>
+            </a>
+        </div>
+
+        <div class="bar-menu black-han-sans-regular">
+            <a href="team.html">
+                <span class="current">TEAM</span>
+            </a>
+        </div>
+    </header>
+        
     <div class="team">
-        <h1 class=first>소통이 잘 되는 팀! 실력있는 팀이 되자!!</h1>
+        <h1 class=teamtext>&emsp;소통이 잘 되는 팀! 실력있는 팀이 되자!!</h1>
         <h2 class=promise>
             <우리들의약속><br><br>
                 시간 관리를 잘하자!
@@ -237,6 +299,9 @@
                 <br>경청을 잘할 수 있도록 노력하는 편입니다.
             </div>
         </div>
+    </div>
+    <div class= footer>
+    
     </div>
 </body>
 
