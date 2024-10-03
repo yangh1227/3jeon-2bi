@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teampage</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nanum+Gothic+Coding:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+        .black-han-sans-regular {
+            font-family: "Black Han Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        header {
+            margin: 30px auto 0px auto;
+            width: 80%;
+            height: 100px;
+            background-color: rgb(59, 59, 59);
+            display: flex;
+            flex-direction: row;
+        }
+
+        section {
+            width: 100%;
+            background-color: green;
+            height: auto;
+        }
+
+        .bar-logo>img {
+            height: 100px;
+            width: 150px;
+        }
+
+        .bar-menu {
+            height: 100px;
+            width: 200px;
+            background-color: rgb(59, 59, 59);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 42px;
+        }
+
+        .bar-menu .current {
+            color: rgb(255, 102, 0);
+        }
+
+        .bar-menu a {
+            text-decoration-line: none;
+        }
+
+        .bar-menu .other {
+            color: white;
+        }
+
+        body {
+            background-color: lightgray;
+        }
+
+        .team {
+            height: 30vh;
+            width: 40vw;
+            margin: 20px auto 20px auto;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .team::after {
+            height: 30vh;
+            width: 38vw;
+            content: "";
+            background-image: url('file:///C:/Users/bjsmo/Desktop/98014735_l_normal_none.png');
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            top: 33vh;
+            left: 50vw;
+            transform: translate3d(-50%, -50%, 0);
+            z-index: -1;
+            opacity: 0.65;
+        }
+
+        .teamtext {
+            font-family: "Nanum Gothic Coding", monospace;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .promise {
+            font-family: "Nanum Gothic Coding", monospace;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 22px;
+            text-align: center;
+        }
+
+        .cards {
+            padding: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .card {
+            position: relative;
+            width: 18vW;
+            height: 44vh;
+            justify-content: center;
+            margin: 1.5vh;
+            margin-right: 3vw;
+            margin-left: 2.5vw;
+            border-radius: 10px;
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 23px;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.3s;
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin-top: 4vh;
+            margin-right: 1vw;
+            border: 0.35vw solid gray;
+        }
+
+        .card-back {
+            margin-top: 4vh;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 17px;
+            background-color: #474747;
+            border: 0.3vw solid gray;
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 450;
+            font-style: normal;
+            text-align: center;
+        }
+
+        .card-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            padding: 5px;
+            opacity: 0;
+            transition: opacity 0.5s;
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            text-align: center;
+        }
+        
+        .footer{
+            height: 10vh;
+        }
+
+        .card:hover .card-img {
+            filter: brightness(0.3);
+        }
+
+        .card:hover .card-text {
+            opacity: 1;
+        }
+
+    </style>
+
+    <script>
+        function openclose(index) {
+            $('#card-img' + index).toggle();
+            $('#card-text' + index).toggle();
+            let cardback = $('#card-back' + index);
+            if (cardback.css('display') === 'none') {
+                cardback.css('display', 'flex');
+            } else {
+                cardback.css('display', 'none');
+            }
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="bar-logo">
+            <img src="img/3J2B_logo.png" alt="">
+        </div>
+        <div class="bar-menu black-han-sans-regular">
+            <a href="main.html">
+                <span class="other">MAIN</span>
+            </a>
+        </div>
+
+        <div class="bar-menu black-han-sans-regular">
+            <a href="blog.html">
+                <span class="other">BLOG</span>
+            </a>
+        </div>
+
+        <div class="bar-menu black-han-sans-regular">
+            <a href="team.html">
+                <span class="current">TEAM</span>
+            </a>
+        </div>
+    </header>
+        
+    <div class="team">
+        <h1 class=teamtext>&emsp;소통이 잘 되는 팀! 실력있는 팀이 되자!!</h1>
+        <h2 class=promise>
+            <우리들의약속><br><br>
+                시간 관리를 잘하자!
+        </h2>
+    </div>
+    </div>
+
+
+    <div class="cards">
+        <div class="card">팀장 임현수
+            <img src="C:\Users\bjsmo\Desktop\프로젝트-사쿠라.png" class="card-img" id="card-img1">
+            <div class="card-text" id="card-text1" onclick="openclose(1)">팀장 임현수<br><br><br>총괄 / 메인페이지 / 발표</div>
+            <div class="card-back" id="card-back1" onclick="openclose(1)">이름 : <br> 임현수<br><br>MBTI 및 자기소개 :
+                <br>ESTJ, 일일루틴을 중심으로 <br>시간관리를 철저히하는 사람입니다. <br>산책, 독서를 취미로 합니다.<br><br> 객관적으로 본 자신의 장점
+                : <br>시간관리를 철저히 합니다. <br>일에 대한 계획적인 접근 능력이 높습니다.<br><br> 자신만의 협업스타일 : <br> 의사소통을 통해 의견을 취합해서<br> 결과물을
+                이끌어내는
+                협업스타일 입니다.
+            </div>
+        </div>
+        <div class="card">팀원 이한준
+            <img src="C:\Users\bjsmo\Desktop\프로젝트-카즈하 (2).png" class="card-img" id="card-img2">
+            <div class="card-text" id="card-text2" onclick="openclose(2)">팀원 이한준<br><br><br>팀 페이지 제작</div>
+            <div class="card-back" id="card-back2" onclick="openclose(2)">이름 : <br> 이한준<br><br>MBTI 및 자기소개 :
+                <br>ENTP, 비전공? 공부량으로 극복하면 그만! <br>열정을 한 가득 가지고 갓 전역한 22살!<br><br> 객관적으로 본 자신의 장점
+                : <br>한 번 몰입하면 9 to 9 정도는 아무것도 아닌<br> 체력과 집중력! <br><br> 자신만의 협업스타일 : <br> 배우는 자세로 임하며, 의견 충돌이 <br> 발생하여도
+                상대방의 주장과 방식에 관해 <br>최대한 존중합니다.
+            </div>
+        </div>
+        <div class="card">팀원 정선우
+            <img src="C:\Users\bjsmo\Desktop\프로젝트-허윤진.png" class="card-img" id="card-img3">
+            <div class="card-text" id="card-text3" onclick="openclose(3)">팀원 정선우<br><br><br>&emsp;메인페이지 및 레이아웃 제작</div>
+            <div class="card-back" id="card-back3" onclick="openclose(3)">이름 : <br> 정선우<br><br>MBTI 및 자기소개 :
+                <br>INTJ, <br><br> 객관적으로 본 자신의 장점
+                : <br>자신의 생각을 명확하게 전달하고,<br>상대방의 의견을 잘 듣고 이해하는 것
+                입니다.<br><br> 자신만의 협업스타일 : <br> 역할 분담과 정기적인 회의를 통해 <br>
+                팀워크를 강화하면 좋겠습니다.
+            </div>
+        </div>
+        <div class="card">팀원 양혁진
+            <img src="C:\Users\bjsmo\Desktop\프로젝트-김채원.png" class="card-img" id="card-img4">
+            <div class="card-text" id="card-text4" onclick="openclose(4)">팀원 양혁진<br><br><br>블로그 페이지 제작</div>
+            <div class="card-back" id="card-back4" onclick="openclose(4)">이름 : <br> 양혁진<br><br>MBTI 및 자기소개 :
+                <br>INFP, 포기를 모르고 성공 할 때 까지 <br>도전하는 도전왕!<br><br> 객관적으로 본 자신의 장점
+                : <br>될때까지 끊임없이 배우고 <br>해결할때까지 포기하지 않는것.<br><br> 자신만의 협업스타일 : <br> 소통을 가장 큰 중점으로 둡니다.
+                <br>소통이 안되면 협업이 너무 힘들기 때문에
+                <br>경청을 잘할 수 있도록 노력하는 편입니다.
+            </div>
+        </div>
+    </div>
+    <div class= footer>
+    
+    </div>
+</body>
+
+</html>
