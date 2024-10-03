@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 상단 바 css 시작 */
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+        .black-han-sans-regular {
+            font-family: "Black Han Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            background-color: rgb(218, 218, 218);
+        }
+
+        header {
+            margin: 30px auto 0px auto;
+            width: 80%;
+            height: 100px;
+            background-color: rgb(59, 59, 59);
+            display: flex;
+            flex-direction: row;
+        }
+
+        section {
+            width: 100%;
+            background-color: green;
+            height: auto;
+        }
+
+        .bar-logo>img {
+            height: 100px;
+            width: 150px;
+        }
+
+        .bar-menu {
+            height: 100px;
+            width: 200px;
+            background-color: rgb(59, 59, 59);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 42px;
+        }
+
+        .bar-menu .current {
+            color: rgb(255, 102, 0);
+        }
+
+        .bar-menu .other {
+            color: white;
+        }
+
+        /* 상단 바 css 끝 */
+    </style>
+</head>
+
+<body>
+
+    <!--상단 바 -->
+    <header>
+        <div class="bar-logo">
+            <img src="img/3J2B_logo.png" alt="">
+        </div>
+        <div class="bar-menu black-han-sans-regular">
+            <span class="current">MAIN</span>
+        </div>
+
+        <div class="bar-menu black-han-sans-regular">
+            <span class="other">BLOG</span>
+        </div>
+
+        <div class="bar-menu black-han-sans-regular">
+            <span class="other">TEAM</span>
+        </div>
+    </header>
+
+    <!--본문 -->
+    <section>
+
+    </section>
+</body>
+
+</html>
