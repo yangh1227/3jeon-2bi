@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+        .black-han-sans-regular {
+            font-family: "Black Han Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            background-color: rgb(218, 218, 218);
+        }
+
+        header {
+            margin: 30px auto 0px auto;
+            width: 80%;
+            height: 100px;
+            background-color: rgb(59, 59, 59);
+            display: flex;
+            flex-direction: row;
+        }
+
+        section {
+            width: 80%;
+            background-color: rgba(0, 255, 115, 0);
+            height: auto;
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 50px;
+            margin-top: 200px;
+            margin-left: 10%;
+        }
+
+        .bar-logo>img {
+            height: 100px;
+            width: 150px;
+        }
+
+        .bar-menu {
+            height: 100px;
+            width: 200px;
+            background-color: rgb(59, 59, 59);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 42px;
+        }
+
+        .bar-menu .current {
+            color: rgb(255, 255, 255);
+        }
+
+        .bar-menu .other {
+            color: white;
+        }
+
+        .blog {
+            color: rgb(255, 102, 0);
+        }
+
+        .card:hover {
+            background-color: rgba(8, 4, 4, 0.295);
+            transition: background-color 0.3s ease;
+        }
+
+        .card-img-hover:hover {
+            opacity: 0.85;
+            transition: opacity 0.3s ease;
+        }
+
+        .card-title {
+            font-weight: bold;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+
+    
+    <header>
+        <div class="bar-logo">
+            <img src="img/3J2B_logo.png" alt="">
+        </div>
+        <div class="bar-menu black-han-sans-regular">
+            <a href="#">
+                <span class="current">MAIN</span>
+            </a>
+        </div>
+
+        <div class="bar-menu black-han-sans-regular">
+            <a href="#">
+                <span class="blog">BLOG</span>
+            </a>
+        </div>
+
+        <div class="bar-menu black-han-sans-regular">
+            <a href="#">
+                <span class="other">TEAM</span>
+            </a>
+        </div>
+    </header>
+
+    
+    <section>
+        
+        <a href="https://bluewhale-korea.tistory.com/" style="text-decoration: none; color: inherit;">
+            <div class="card mb-3" style="max-width: 10000px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="img/1.jpg" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">임현수 (팀장)</h5>
+                            <p class="card-text">bluewhale-korea 님의 블로그 입니다..</p>
+                            <p class="card-text"><small class="text-body-secondary"> </small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        
+        <a href="https://velog.io/@vaxee_/posts" style="text-decoration: none; color: inherit;">
+            <div class="card mb-3" style="max-width: 10000px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="img/2.jpg" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">이한준 (팀원)</h5>
+                            <p class="card-text">Every cloud has a silver lining.</p>
+                            <p class="card-text"><small class="text-body-secondary"> </small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        
+        <a href="https://devnona.tistory.com/" style="text-decoration: none; color: inherit;">
+            <div class="card mb-3" style="max-width: 10000px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="img/3.jpg" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">정선우 (팀원)</h5>
+                            <p class="card-text">DevNona.</p>
+                            <p class="card-text"><small class="text-body-secondary"> </small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        
+        <a href="https://dystopia45.tistory.com/" style="text-decoration: none; color: inherit;">
+            <div class="card mb-3" style="max-width: 10000px; height: 200;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="img/4.jpg" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">양혁진 (팀원)</h5>
+                            <p class="card-text">통통튀는 완벽주의 개발자 블로그.</p>
+                            <p class="card-text"><small class="text-body-secondary"> </small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+</body>
+
+</html>
